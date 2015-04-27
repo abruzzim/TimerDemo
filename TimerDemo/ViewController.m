@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "MZTimerLabel.h"
 
+#define LABEL_FONT_TYPE "HelveticaNeue-UltraLight"
 #define LABEL_FONT_SIZE 20.0f
+#define TIMER_FONT_TYPE "HelveticaNeue-UltraLight"
 #define TIMER_FONT_SIZE 28.0f
+#define BUTTON_FONT_TYPE "HelveticaNeue-UltraLight"
 #define BUTTON_FONT_SIZE 15.0f
 
 @interface ViewController ()
@@ -26,7 +29,7 @@
     
     self.elapsedLbl = [[UILabel alloc] init];
     self.elapsedLbl.backgroundColor = [UIColor whiteColor];
-    self.elapsedLbl.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:LABEL_FONT_SIZE];
+    self.elapsedLbl.font = [UIFont fontWithName:@LABEL_FONT_TYPE size:LABEL_FONT_SIZE];
     self.elapsedLbl.textColor = [UIColor blueColor];
     self.elapsedLbl.textAlignment = NSTextAlignmentCenter;
     self.elapsedLbl.text = @"Elapsed Time";
@@ -72,7 +75,7 @@
     
     self.stopwatch = [[MZTimerLabel alloc] init];
     self.stopwatch.timeLabel.backgroundColor = [UIColor whiteColor];
-    self.stopwatch.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:TIMER_FONT_SIZE];
+    self.stopwatch.timeLabel.font = [UIFont fontWithName:@TIMER_FONT_TYPE size:TIMER_FONT_SIZE];
     self.stopwatch.timeLabel.textColor = [UIColor blueColor];
     self.stopwatch.timeLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.stopwatch];
@@ -118,7 +121,7 @@
     
     self.countdownLbl = [[UILabel alloc] init];
     self.countdownLbl.backgroundColor = [UIColor whiteColor];
-    self.countdownLbl.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:LABEL_FONT_SIZE];
+    self.countdownLbl.font = [UIFont fontWithName:@LABEL_FONT_TYPE size:LABEL_FONT_SIZE];
     self.countdownLbl.textColor = [UIColor redColor];
     self.countdownLbl.textAlignment = NSTextAlignmentCenter;
     self.countdownLbl.text = @"Countdown Timer";
@@ -164,7 +167,7 @@
     
     self.countdownTimer = [[MZTimerLabel alloc] initWithTimerType:MZTimerLabelTypeTimer];
     self.countdownTimer.timeLabel.backgroundColor = [UIColor whiteColor];
-    self.countdownTimer.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:TIMER_FONT_SIZE];
+    self.countdownTimer.timeLabel.font = [UIFont fontWithName:@TIMER_FONT_TYPE size:TIMER_FONT_SIZE];
     self.countdownTimer.timeLabel.textColor = [UIColor redColor];
     self.countdownTimer.timeLabel.textAlignment = NSTextAlignmentCenter;
     [self.countdownTimer setCountDownTime:5];
@@ -213,7 +216,7 @@
     self.countdownBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     self.countdownBtn.layer.cornerRadius = 5;
     self.countdownBtn.backgroundColor = [UIColor whiteColor];
-    self.countdownBtn.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:BUTTON_FONT_SIZE];
+    self.countdownBtn.titleLabel.font = [UIFont fontWithName:@BUTTON_FONT_TYPE size:BUTTON_FONT_SIZE];
     self.countdownBtn.tintColor = [UIColor redColor];
     self.countdownBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.countdownBtn setTitle:@"Start" forState:UIControlStateNormal];
